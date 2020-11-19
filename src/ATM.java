@@ -7,12 +7,22 @@ public class ATM {
     }
 
     int depositMoney(int takeSum) {
-        amountMoney= amountMoney + takeSum;
-        return amountMoney;
-    }
-    int withdrawCash (int takeOffSum) {
-        amountMoney = amountMoney - takeOffSum;
+        amountMoney = amountMoney + takeSum;
         return amountMoney;
     }
 
-}
+    Object withdrawCash(int takeOffSum) {
+        if (takeOffSum > amountMoney) {
+            String s = "не достаточно средств в банкомате";
+            return s;
+
+        }
+
+            {
+                amountMoney = amountMoney - takeOffSum;
+                return amountMoney;
+            }
+
+        }
+    }
+
